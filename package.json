@@ -5,7 +5,7 @@
   "license": "MIT",
   "scripts": {
     "copy-html": "copyfiles -u 1 src/**/*.html src/**/*.css lib",
-    "replace": "rexreplace \"ts\" \"js\" lib/**/*.html",
+    "replace": "rexreplace \"\\.ts\" \".js\" lib/**/*.html",
     "build": "tsc && yarn run copy-html && yarn run replace",
     "prestart": "yarn build",
     "start": "electron ."
