@@ -1,31 +1,24 @@
 document.title = 'FT-Island';
 
-document.body.appendChild<HTMLDivElement>(((): HTMLDivElement => {
-    const appContainer: HTMLDivElement = document.createElement('div');
-    appContainer.id = 'app-container';
+const appContainer: HTMLDivElement = document.createElement('div');
+appContainer.id = 'app-container';
+document.body.appendChild<HTMLDivElement>(appContainer);
 
-    appContainer.appendChild<HTMLDivElement>(((): HTMLDivElement => {
-        const valueTextContainer: HTMLDivElement = document.createElement('div');
-        valueTextContainer.id = 'value-text-container';
+const valueTextContainer: HTMLDivElement = document.createElement('div');
+valueTextContainer.id = 'value-text-container';
+appContainer.appendChild<HTMLDivElement>(valueTextContainer);
 
-        valueTextContainer.appendChild<HTMLDivElement>(((): HTMLDivElement => {
-            const valueText: HTMLDivElement = document.createElement('div');
-            valueText.id = 'value-text';
-            valueText.innerText = '100T';
+const valueText: HTMLDivElement = document.createElement('div');
+valueText.id = 'value-text';
+valueText.innerText = '100톤';
+valueTextContainer.appendChild<HTMLDivElement>(valueText);
 
-            return valueText;
-        })());
+const valueTextInfo: HTMLDivElement = document.createElement('div');
+valueTextInfo.id = 'value-text';
+valueTextInfo.innerText = '의 음식이 버려졌어요!';
+valueTextContainer.appendChild<HTMLDivElement>(valueTextInfo);
 
-        valueTextContainer.appendChild<HTMLDivElement>(((): HTMLDivElement => {
-            const valueTextInfo: HTMLDivElement = document.createElement('div');
-            valueTextInfo.id = 'value-text-info';
-            valueTextInfo.innerText = 'Hello!';
-
-            return valueTextInfo;
-        })());
-
-        return valueTextContainer;
-    })());
-
-    return appContainer;
-})());
+const dataContainer: HTMLDivElement = document.createElement('div');
+dataContainer.id = 'data-container';
+dataContainer.innerText = 'DATA';
+appContainer.appendChild<HTMLDivElement>(dataContainer);
