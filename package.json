@@ -18,7 +18,7 @@
   },
   "dependencies": {
     "copyfiles": "^2.1.0",
-    "electron": "^5.0.6",
+    "electron": "^18.3.7",
     "rexreplace": "^4.1.1"
   }
 }
